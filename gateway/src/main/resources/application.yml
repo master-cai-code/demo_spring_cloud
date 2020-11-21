@@ -1,0 +1,19 @@
+server:
+  port: 9090
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848  #注册到 Nacos uri可以通过服务名直接访问
+    gateway:
+      routes:
+        - id: gateway-service
+          uri: lb://nacos-consumer # lb代表从注册中心获取服务
+          predicates:
+            #http://localhost:9090/spring-cloud ==>https://spring.io/projects/spring-cloud
+            #也就是将路径转发到另外一台服务器上（本机/路径 => uri/路径）
+            - Path=/consumer
+          filters: #分 请求前和请求后
+            - AddRequestParameter=param1, bar #路径后面添加参数param1=bar(String类型)

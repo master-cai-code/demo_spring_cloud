@@ -1,21 +1,17 @@
-package com.caimy;
+package com.mycai;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
  * @author zl-cai
- * @date 2020/11/21  1:03
+ * @date 2020/11/21  18:28
  */
 @SpringBootApplication
 @EnableDiscoveryClient
-@EnableFeignClients
-public class NacosConsumerApplication {
-
+public class GateWayApplication {
     public static void main(String[] args) {
-        SpringApplication.run(NacosConsumerApplication.class, args);
+        SpringApplication.run(GateWayApplication.class, args);
     }
-
 }
