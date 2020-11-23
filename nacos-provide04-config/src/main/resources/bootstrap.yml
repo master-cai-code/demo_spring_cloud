@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: nacosConfig  #nacos中的Data Id: prefix-profile.yml(profile:dev,test,proc)
+  cloud:
+    nacos:
+      discovery:    #注册中心
+        server-addr: 127.0.0.1:8848
+      config:        #配置中心
+        server-addr: 127.0.0.1:8848
+        file-extension: yml
+        prefix: nacosConfig  # prefix
+server:
+  port: 9998  #远程nacos中的配置属性优先级更高，以nacos中的为准

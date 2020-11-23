@@ -17,9 +17,10 @@
 
 
     <modules>
-        <module>nacos-provide</module>
+        <module>nacos-provide01</module>
         <module>nacos-provide02</module>
         <module>nacos-provide03</module>
+        <module>nacos-provide04-config</module>
         <module>nacos-consumer</module>
         <module>gateway</module>
     </modules>
