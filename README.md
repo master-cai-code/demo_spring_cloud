@@ -11,4 +11,14 @@
 ## sentinel 熔断降级：
 
 ## sleuth+zipkin 链路追踪：
+
+
+
+### ELK 日志查看
+
+### Redis集群
+
+### Mysql集群
+
+### MQ集群
  
